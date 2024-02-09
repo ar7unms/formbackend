@@ -2,6 +2,7 @@ const express=require("express")
 const cors=require("cors")
 const mongoose=require("mongoose")
 const blogrouter=require("./blogroute")
+const postrouter=require("./postrouter")
 
 const app=express()
 
@@ -12,6 +13,7 @@ mongoose.connect("mongodb+srv://msarjun077:Arjun2000@cluster0.nmwlgoz.mongodb.ne
     useNewUrlParser:true
 })
 app.use("/api/blog",blogrouter)
+app.use("/api/post",postrouter)
 
 
 app.listen(3006,()=>{
