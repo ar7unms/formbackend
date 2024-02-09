@@ -7,12 +7,12 @@ const app=express()
 
 app.use(express.json())
 app.use(cors())
-
-
-app.use("/api/blog",blogrouter)
-app.get("/",(req,res)=>{
-    res.send("welcome")
+mongoose.connect("mongodb+srv://msarjun077:Arjun2000@cluster0.nmwlgoz.mongodb.net/blogappDB?retryWrites=true&w=majority",
+{
+    uUseNewUrlParser:true
 })
+app.use("/api/blog",blogrouter)
+
 
 app.listen(3006,()=>{
     console.log("server running")

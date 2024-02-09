@@ -11,7 +11,6 @@ res.json({
 status:"success"    
 }
 )
-res.send("success")
 }
 )
 

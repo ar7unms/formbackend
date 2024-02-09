@@ -7,8 +7,8 @@ const blogSchema=new mongoose.Schema(
         mobile:String,
         pincode:String,
         email:String,
-        password:String,
+        password:String
 
     }
 )
-module.exports=mongoose.model('blog',bmiSchema)
+module.exports=mongoose.model('blog',blogSchema)
