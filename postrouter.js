@@ -11,4 +11,16 @@ router.post("/post",async(req,res)=>{
     })
 res.send("success")
 })
+
+router.get("/viewall",async(req,res)=>{
+    let result= await postmodel.find()
+    .populate("userid","age mobile pincode address post -_id")
+    .exec()
+    res.json(result)
+})
+
+router.get("/viewpost",async(req,res)=>{
+    let result=await postmodel.find()
+    res.json(result)
+})
 module.exports=router
